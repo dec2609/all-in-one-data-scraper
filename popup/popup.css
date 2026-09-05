@@ -1,0 +1,94 @@
+/* Thiết lập kích thước popup và nền tối */
+body {
+    width: 280px;
+    margin: 0;
+    padding: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #1a1a1b;
+    color: #ffffff;
+}
+
+/* Trang trí Header */
+header {
+    text-align: center;
+    border-bottom: 1px solid #343536;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+}
+header h2 {
+    margin: 0;
+    font-size: 18px;
+    color: #00f2fe;
+}
+#status-text {
+    margin: 5px 0 0 0;
+    font-size: 12px;
+    color: #f1c40f;
+}
+
+/* Quản lý các ngăn (Section) */
+.tool-section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+/* Class quan trọng nhất: Dùng để giấu những thứ không cần thiết */
+.hidden {
+    display: none !important;
+}
+
+/* Trang trí các hộp thoại và Input của XenForo */
+.logo-box {
+    text-align: center;
+    font-weight: bold;
+    padding: 10px;
+    background: #2c3e50;
+    border-radius: 6px;
+    margin-bottom: 5px;
+}
+.input-group {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.input-group input {
+    width: 60px;
+    padding: 5px;
+    border-radius: 4px;
+    border: 1px solid #555;
+    background: #333;
+    color: #fff;
+    text-align: center;
+}
+
+/* Hiệu ứng Nút bấm chung */
+button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+button:hover {
+    opacity: 0.8;
+}
+
+/* Bảng màu cho từng loại nút */
+.btn-group {
+    display: flex;
+    gap: 10px;
+}
+.btn-primary { background: #3498db; color: white; }
+.btn-secondary { background: #5a5a5c; color: white; }
+.btn-success { background: #27ae60; color: white; }
+.btn-danger { background: #c0392b; color: white; margin-top: 15px; }
+
+/* Thông báo lỗi */
+.warning-text {
+    text-align: center;
+    color: #e74c3c;
+    font-weight: bold;
+    font-size: 14px;
+}

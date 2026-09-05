@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <title>All-in-One Scraper</title>
+    <!-- Nhúng file CSS để trang trí -->
+    <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+    <!-- PHẦN ĐẦU: Biển hiệu và Trạng thái -->
+    <header>
+        <h2>🚀 SUPER SCRAPER</h2>
+        <p id="status-text">Đang nhận diện trang web...</p>
+    </header>
+
+    <!-- PHẦN THÂN: Khu vực thay đổi linh hoạt -->
+    <main>
+        <!-- Ngăn 1: Dành cho FB, YT, Reddit, TikTok -->
+        <div id="ui-standard" class="tool-section hidden">
+            <div id="platform-logo" class="logo-box">🌐 Đang tải...</div>
+            <div class="btn-group">
+                <button id="btn-start" class="btn-primary">▶️ BẮT ĐẦU</button>
+                <button id="btn-stop" class="btn-secondary">⏹️ DỪNG</button>
+            </div>
+            <button id="btn-scrape" class="btn-success">💾 CÀO & TẢI TXT</button>
+        </div>
+
+        <!-- Ngăn 2: Dành riêng cho XenForo -->
+        <div id="ui-xenforo" class="tool-section hidden">
+            <div class="logo-box">💬 XenForo Forum</div>
+            <div class="input-group">
+                <label>Từ trang:</label>
+                <input type="number" id="xen-start" value="1" min="1">
+            </div>
+            <div class="input-group">
+                <label>Đến trang:</label>
+                <input type="number" id="xen-end" value="10" min="1">
+            </div>
+            <button id="btn-scrape-xen" class="btn-success">🚀 CÀO THỚT & TẢI FILE</button>
+        </div>
+
+        <!-- Ngăn 3: Báo lỗi khi vào trang web vớ vẩn -->
+        <div id="ui-unsupported" class="tool-section">
+            <p class="warning-text">⚠️ Trang web này chưa có tool cào!</p>
+        </div>
+    </main>
+
+    <!-- PHẦN CHÂN: Nút dọn dẹp chung -->
+    <footer>
+        <button id="btn-reset" class="btn-danger">🗑️ DỌN RÁC BỘ NHỚ</button>
+    </footer>
+
+    <!-- Gọi anh "Thu ngân" vào để bắt sự kiện click -->
+    <script src="popup.js"></script>
+</body>
+</html>

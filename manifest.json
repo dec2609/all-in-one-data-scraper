@@ -1,0 +1,42 @@
+{
+  "manifest_version": 3,
+  "name": "All-in-One Data Scraper",
+  "version": "1.0",
+  "description": "Vũ khí tối thượng tự động hóa cào dữ liệu đa nền tảng (FB, YT, Reddit, TikTok, XenForo).",
+  
+  "action": {
+    "default_popup": "popup/popup.html",
+    "default_icon": "icons/icon48.png"
+  },
+  
+  "background": {
+    "service_worker": "scripts/background.js"
+  },
+  
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.facebook.com/*",
+        "*://*.youtube.com/*",
+        "*://*.reddit.com/*",
+        "*://*.tiktok.com/*",
+        "*://*.voz.vn/*",
+        "<all_urls>" 
+      ],
+      "js": [
+        "scripts/scrapers/facebook.js",
+        "scripts/scrapers/youtube.js",
+        "scripts/scrapers/reddit.js",
+        "scripts/scrapers/tiktok.js",
+        "scripts/scrapers/xenforo.js",
+        "scripts/content.js"
+      ]
+    }
+  ],
+  
+  "permissions": [
+    "storage",
+    "activeTab",
+    "scripting"
+  ]
+}
